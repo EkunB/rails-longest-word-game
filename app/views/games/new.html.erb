@@ -1,0 +1,12 @@
+<div class="text-center">
+  <h1>Welcome to the longest word game !</h1>
+  <h2>Here is your grid</h2>
+  <p><%= @letters %></p>
+  <h2>What is the longest word you can find ?</h2>
+  <form action="score" method="post" data-turbo="false">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+    <input type="text" name="word">
+    <button class="btn btn-success">Let's go !</button>
+  </form>
+</div>
